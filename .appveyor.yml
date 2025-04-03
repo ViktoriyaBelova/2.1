@@ -1,0 +1,11 @@
+image: Ubuntu2204
+
+install:
+  - java -jar ./artifacts/app-order.jar &
+  - ./gradlew build
+
+build_script:
+  - echo "Building..."
+
+test_script:
+  - ./gradlew test
