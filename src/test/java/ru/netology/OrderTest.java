@@ -10,13 +10,13 @@ public class OrderTest {
 
     @BeforeAll
     public static void setupAll() {
-        WebDriverManager.chromedriver().setup(); // Автоматическая настройка драйвера
+        WebDriverManager.chromedriver().setup();
     }
 
     @BeforeEach
     public void setUp() {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless"); // Режим без GUI
+        options.addArguments("--headless");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--no-sandbox");
         driver = new ChromeDriver(options);
@@ -24,8 +24,8 @@ public class OrderTest {
 
     @Test
     public void testOrder() {
-        driver.get("http://localhost:9999"); // URL вашего SUT
-        // Ваши тесты...
+        driver.get("http://localhost:9999");
+
     }
 
     @AfterEach

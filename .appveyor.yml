@@ -8,4 +8,4 @@ build_script:
   - echo "Building..."
 
 test_script:
-  - ./gradlew test
+  - ./gradlew testinstall:
