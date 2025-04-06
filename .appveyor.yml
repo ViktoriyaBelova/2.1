@@ -1,11 +1,18 @@
-image: Ubuntu2204
+image: Ubuntu  # образ для сборки
+
+stack: jdk 11  # версия JDK
+
+branches:
+  only:
+    - main  # ветка git
+
+build: off
 
 install:
+  # запускаем SUT (& означает, что в фоновом режиме не блокируем терминал для запуска тестов)
   - java -jar ./artifacts/app-order.jar &
-  - ./gradlew build
+  - chmod +x gradlew
 
 build_script:
-  - echo "Building..."
-
-test_script:
-  - ./gradlew testinstall:
+  - ./gradlew test --info # запускаем тест, флаг --info позволяет выводить больше информации
+  - chmod +x gradlew
