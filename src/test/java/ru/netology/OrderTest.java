@@ -19,6 +19,7 @@ public class OrderTest {
     @BeforeAll
     static void setupAll() {
         WebDriverManager.chromedriver().setup();
+        System.out.println("ChromeDriver version: " + WebDriverManager.chromedriver().getDownloadedDriverVersion ());
     }
 
     @BeforeEach
