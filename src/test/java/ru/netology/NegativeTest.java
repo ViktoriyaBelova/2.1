@@ -73,7 +73,7 @@ public class NegativeTest {
         driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("3245673");
         driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         driver.findElement(By.cssSelector("[type=button]")).click();
-        assertEquals("Телефон указан неверно. Должно быть 11 цифр, например, +79055463426.", driver.findElement(By.cssSelector("[data-test-id=phone].input_invalid .input__sub")).getText().trim());
+        assertEquals("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678.", driver.findElement(By.cssSelector("[data-test-id=phone].input_invalid .input__sub")).getText().trim());
     }
 
 
