@@ -50,7 +50,7 @@ public class OrderTest {
     @Test
     void InvalidNameSurnameTest1() {
         driver.findElement(By.cssSelector("[type='text']")).sendKeys("Ivanov Ivan");
-        driver.findElement(By.cssSelector("[type='tel']")).sendKeys("++79991234567");
+        driver.findElement(By.cssSelector("[type='tel']")).sendKeys("+79991234567");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
         driver.findElement(By.cssSelector(".button__text")).click();
         String text = driver.findElement(By.cssSelector("[data-test-id='name'].input_invalid .input__sub")).getText();
