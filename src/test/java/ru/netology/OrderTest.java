@@ -30,7 +30,7 @@ public class OrderTest {
         options.addArguments(
                 "--disable-dev-shm-usage",
                 "--no-sandbox",
-              //  "--headless",
+                "--headless",
                 "--remote-allow-origins=*"
         );
         driver = new ChromeDriver(options);
